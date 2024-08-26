@@ -25,5 +25,17 @@
       "",
       "$4"
     ]
+  },
+  "copyright-shebang": {
+    "prefix": "copyright",
+    "description": "Create the copyright header",
+    "scope": "yaml",
+    "body": [
+      "# SPDX-License-Identifier: AGPL-3.0-or-later",
+      "#",
+      "# SPDX-FileCopyrightText: ${1:year} ${2:name} <${3:email}>",
+      "",
+      "$4"
+    ]
   }
 }
