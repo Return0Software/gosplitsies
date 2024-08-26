@@ -1,3 +1,10 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+
+SPDX-FileCopyrightText: 2024 Joseph Martinsen <joseph@martinsen.com>
+SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+-->
+
 # splitsies
 
 ## ui

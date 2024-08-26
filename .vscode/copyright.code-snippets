@@ -1,0 +1,29 @@
+{
+  "copyright-clike": {
+    "prefix": "copyright",
+    "description": "Create the copyright header",
+    "scope": "css,javascript,typescript",
+    "body": [
+      "/* SPDX-License-Identifier: AGPL-3.0-or-later",
+      " *",
+      " * SPDX-FileCopyrightText: ${1:year} ${2:name} <${3:email}>",
+      " */",
+      "",
+      "$4"
+    ]
+  },
+  "copyright-html": {
+    "prefix": "copyright",
+    "description": "Create the copyright header",
+    "scope": "html,markdown",
+    "body": [
+      "<!--",
+      "   SPDX-License-Identifier: AGPL-3.0-or-later",
+      "",
+      "   SPDX-FileCopyrightText: ${1:year} ${2:name} <${3:email}>",
+      "-->",
+      "",
+      "$4"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+
+version = 1
+SPDX-HomePage = "https://github.com/return0software/splitsies"
+SPDX-PackageName = "splitsies"
+
+[[annotations]]
+path = [
+    ".vscode/copyright.code-snippets",
+    "ui/package.json",
+    "ui/package-lock.json",
+]
+precedence              = "override"
+SPDX-FileCopyrightText  = "2024 Joseph Martinsen <joseph@martinsent.com>"
+SPDX-License-Identifier = "AGPL-3.0-or-later"
