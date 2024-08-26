@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
