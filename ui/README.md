@@ -1,3 +1,9 @@
+<!--
+SPDX-License-Identifier: AGPL-3.0-or-later
+
+SPDX-FileCopyrightText: 2024 Joseph Martinsen <joseph@martinsen.com>
+-->
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
