@@ -1,0 +1,30 @@
+/* SPDX-License-Identifier: AGPL-3.0-or-later
+ *
+ * SPDX-FileCopyrightText: 2024 Joseph Martinsen <joseph@martinsen.com>
+ */
+
+ .reciept {
+    color: black;
+    background-color: white;
+    margin-top: 4em;
+    padding: 3em 0em;
+
+    --mask: conic-gradient(from -47.5deg at bottom,#0000,#000 1deg 94deg,#0000 95deg) 50%/65.48px 100%;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+ }
+
+ .reciept-title {
+    border: none;
+    background: white;
+    color: black;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: italic;
+ }
+
+ .title {
+    text-decoration: underline;
+    border-bottom: 1px solid black;
+ }
+ 

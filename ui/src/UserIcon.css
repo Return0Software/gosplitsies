@@ -1,0 +1,34 @@
+/* SPDX-License-Identifier: AGPL-3.0-or-later
+ *
+ * SPDX-FileCopyrightText: 2024 Joseph Martinsen <joseph@martinsen.com>
+ */
+
+ .user-icon-outline {
+    border: 1px solid white;
+    width: 6em;
+    height: 6em;
+    border-radius: 100%;
+    font-size: 0.5em;
+    float: left;
+    margin: 1em;
+ }
+
+ .default-user-icon::before{
+    content:" ";
+    display:block;
+    height:2em;
+    width:2em;
+    background:white;
+    position:relative; left:2em;top:0.8em;
+    border-radius:2em;
+  }
+
+  .default-user-icon::after{
+    content:" ";
+    display:block;
+    height:2em;
+    width:4em;
+    background:white;
+    position:relative; left:1em;top:1em;
+    border-radius:2em 2em 0 0;
+  }

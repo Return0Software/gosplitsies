@@ -4,12 +4,14 @@
  */
 
 import './App.css'
+import FacePile from './FacePile'
+import Reciept from "./Reciept"
 
 function App() {
   return (
     <>
-      <h1>Go Splitsies!</h1>
-      <p>Coming soon...</p>
+      <FacePile />
+      <Reciept />
     </>
   )
 }
