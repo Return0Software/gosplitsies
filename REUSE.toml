@@ -13,5 +13,5 @@ path = [
     "ui/package-lock.json",
 ]
 precedence              = "override"
-SPDX-FileCopyrightText  = "2024 Joseph Martinsen <joseph@martinsent.com>"
+SPDX-FileCopyrightText  = "2024 Joseph Martinsen <joseph@martinsen.com>"
 SPDX-License-Identifier = "AGPL-3.0-or-later"

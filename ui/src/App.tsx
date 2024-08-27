@@ -8,7 +8,7 @@ import './App.css'
 function App() {
   return (
     <>
-      <h1>splitsies</h1>
+      <h1>Go Splitsies!</h1>
       <p>Coming soon...</p>
     </>
   )

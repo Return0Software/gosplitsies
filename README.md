@@ -5,7 +5,7 @@ SPDX-FileCopyrightText: 2024 Joseph Martinsen <joseph@martinsen.com>
 SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
 -->
 
-# splitsies
+# gosplitsies
 
 ## ui
 
