@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+
+log:
+  # Path to log to if log-location is file
+  filename: ""
+  # Location to send logs to (file, stderr, stdout, syslog)
+  location: "stderr"
+server:
+  # Port to start the server on
+  port: 5431

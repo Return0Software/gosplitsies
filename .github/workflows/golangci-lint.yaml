@@ -2,26 +2,31 @@
 #
 # SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
 
-name: REUSE
+name: golangci-lint
 
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - "**.go"
 
 permissions:
   contents: read
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.head_ref }}
-  cancel-in-progress: true
-
 jobs:
-  reuse:
+  golangci-lint:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout gosplitsies
         uses: actions/checkout@v4
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+
       - name: Lint
-        uses: fsfe/reuse-action@v5
+        uses: golangci/golangci-lint-action@v6
+        with:
+          version: latest
