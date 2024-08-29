@@ -7,7 +7,10 @@ import "./UserIcon.css"
 
 function DefaultIcon() {
     return (
-        <div className="default-user-icon user-icon-outline"/>
+        <div className="default-avatar">
+            {/* TODO: {profile.name.charAt(0).toUpperCase()} */}
+            J
+        </div>
     )
 }
 

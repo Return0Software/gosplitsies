@@ -33,18 +33,18 @@ function FacePile() {
 
     return (
         <div className="header sticky">
-            <div id="face-pile">
-                {splitUsers.map(splitUser => {
-                    return <UserIcon {...splitUser} onRemove={removeSplitUser} />
-                })}
-                
-                {/* This should be an "add" icon */}
-                <UserIcon type="default" />
-
-                <button onClick={() => {
-                    dispatchSplitUser({ type: "add", item: splitUsers.length % 2 ? { type: "img" } : { type: "default" }})
-                }}>Add</button>
+            <div className="profile-list-container">
+                <div className="profile-list">
+                    {splitUsers.map((splitUser, index) => (
+                        <div className="profile-item" key={index}>
+                            <UserIcon {...splitUser} onRemove={removeSplitUser} />
+                        </div>
+                    ))}
+                </div>
             </div>
+            <button onClick={() => {
+                dispatchSplitUser({ type: "add", item: splitUsers.length % 2 ? { type: "img" } : { type: "default" }})
+            }}>Add</button>
         </div>
     )
 }

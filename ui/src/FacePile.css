@@ -15,7 +15,14 @@
     width: 100%;
 }
 
-.face-pile {
+.profile-list-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.profile-list {
     display: flex;
-    place-content: start;
+    flex-direction: row;
+    gap: 10px;
 }
