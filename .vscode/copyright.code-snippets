@@ -2,7 +2,7 @@
   "copyright-clike": {
     "prefix": "copyright",
     "description": "Create the copyright header",
-    "scope": "css,javascript,typescript",
+    "scope": "css,javascript,jsonc,typescript",
     "body": [
       "/* SPDX-License-Identifier: AGPL-3.0-or-later",
       " *",
