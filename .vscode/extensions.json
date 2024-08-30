@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: AGPL-3.0-or-later
+ *
+ * SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+ */
+
+{
+  "recommendations": [
+    "github.vscode-github-actions",
+    "GitHub.vscode-pull-request-github",
+    "golang.go",
+    "pb33f.vacuum",
+    "redhat.vscode-yaml",
+    "tamasfe.even-better-toml",
+  ]
+}
