@@ -9,8 +9,11 @@ SPDX-PackageName = "splitsies"
 [[annotations]]
 path = [
     ".vscode/copyright.code-snippets",
+    "go.mod",
+    "go.sum",
     "ui/package.json",
     "ui/package-lock.json",
+    "VERSION",
 ]
 precedence              = "override"
 SPDX-FileCopyrightText  = "2024 Joseph Martinsen <joseph@martinsen.com>"

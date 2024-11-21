@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+
+lint:
+  details: true
+  fail-severity: "warn"
+  no-banner: true
+  no-clip: true
+  snippets: true

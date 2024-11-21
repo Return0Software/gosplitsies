@@ -1,0 +1,94 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+
+# https://swagger.io/specification/
+openapi: "3.1.0"
+info:
+  title: "GoSplitsies"
+  description: "GoSplitsies is a service for splitting payments"
+  version: "0"
+  contact:
+    name: "Return0Software"
+    url: "https://github.com/Return0Software/gosplitsies"
+  license:
+    name: "AGPLv3"
+    identifier: "AGPL-3.0-or-later"
+    url: "https://www.gnu.org/licenses/agpl-3.0.en.html"
+tags:
+  - name: admin
+    description: "Administrative Routes"
+paths:
+  "/logs/level":
+    get:
+      operationId: "get-log-level"
+      summary: "Get the current log level"
+      description: "Get the current log level. This endpoint is provided by zap."
+      tags:
+        - admin
+      responses:
+        "200":
+          description: "Return the current log level"
+          content:
+            "application/json":
+              examples:
+                debug:
+                  "$ref": "#/components/examples/LogLevel"
+              schema:
+                "$ref": "#/components/schemas/LogLevel"
+      externalDocs:
+        url: "https://pkg.go.dev/go.uber.org/zap#AtomicLevel.ServeHTTP"
+    put:
+      operationId: "change-log-level"
+      summary: "Set the current log level"
+      description: "Set the current logging level. This endpoint is provided by zap."
+      tags:
+        - admin
+      parameters:
+        - name: "level"
+          in: query
+          description: "The log level to set."
+          examples:
+            debug:
+              "$ref": "#/components/examples/LogLevel"
+          schema:
+            "$ref": "#/components/schemas/LogLevel"
+      requestBody:
+        description: "Description of the log level to set."
+        content:
+          "application/json":
+            examples:
+              debug:
+                externalValue: "#/components/examples/LogLevel"
+            schema:
+              "$ref": "#/components/schemas/LogLevel"
+          "application/x-www-form-urlencoded":
+            examples:
+              debug:
+                "$ref": "#/components/examples/LogLevel"
+            schema:
+              "$ref": "#/components/schemas/LogLevel"
+      externalDocs:
+        url: "https://pkg.go.dev/go.uber.org/zap#AtomicLevel.ServeHTTP"
+components:
+  schemas:
+    LogLevel:
+      summary: "Log level"
+      description: "Description of the log level."
+      type: object
+      properties:
+        level:
+          enum:
+            - "debug"
+            - "info"
+            - "warning"
+            - "error"
+            - "fatal"
+      required:
+        - "level"
+      example:
+        level: "debug"
+  examples:
+    LogLevel:
+      description: "How to set the log level to debug."
+      level: "debug"
