@@ -3,8 +3,8 @@
 # SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
 
 version = 1
-SPDX-HomePage = "https://github.com/return0software/splitsies"
-SPDX-PackageName = "splitsies"
+SPDX-HomePage = "https://github.com/return0software/gosplitsies"
+SPDX-PackageName = "gosplitsies"
 
 [[annotations]]
 path = [
