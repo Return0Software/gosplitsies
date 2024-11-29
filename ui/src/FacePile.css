@@ -1,0 +1,28 @@
+/* SPDX-License-Identifier: AGPL-3.0-or-later
+ *
+ * SPDX-FileCopyrightText: 2024 Joseph Martinsen <joseph@martinsen.com>
+ */
+
+ .header {
+    background: #555;
+    color: #f1f1f1;
+    z-index: 1;
+ }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.profile-list-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.profile-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
