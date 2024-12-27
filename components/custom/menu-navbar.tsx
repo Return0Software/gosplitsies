@@ -5,7 +5,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import { Input } from "@/components/ui/input"
 
 type MenuNavbarProps = {
-    title: string
+    title?: string
 }
 
 export default function MenuNavbar({ title = "Go Splitsies Title" }: MenuNavbarProps) {
@@ -13,7 +13,7 @@ export default function MenuNavbar({ title = "Go Splitsies Title" }: MenuNavbarP
         <nav className="fixed top-0 z-10 bg-white shadow dark:shadow-dark inset-x-0">
             <div className="w-full mx-auto max-w-7xl">
                 <div className="flex items-center h-14 px-4 md:px-6">
-                    <Link href="#" className="mr-6 text-2xl font-semibold" prefetch={false}>
+                    <Link href="/" className="mr-6 text-2xl font-semibold" prefetch={false}>
                         Go Splitsies
                     </Link>
 
@@ -21,8 +21,9 @@ export default function MenuNavbar({ title = "Go Splitsies Title" }: MenuNavbarP
                         <Input
                             className="max-w-sm border-none bg-transparent text-2xl font-semibold focus:border focus:border-input focus:bg-background"
                             type="text"
-                            placeholder="Enter title..."
-                            value={title}
+                            placeholder="Enter meal name..."
+                        // defaultValue={title}
+                        // TODO: Manage state
                         />
                     </div>
 
