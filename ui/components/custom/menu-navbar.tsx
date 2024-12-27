@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 import { Input } from "@/components/ui/input"
 
-type MenuNavbarProps = {
+export type MenuNavbarProps = {
     title?: string
 }
 
-export default function MenuNavbar({ title = "Go Splitsies Title" }: MenuNavbarProps) {
+export default function MenuNavbar() {
     return (
         <nav className="fixed top-0 z-10 bg-white shadow dark:shadow-dark inset-x-0">
             <div className="w-full mx-auto max-w-7xl">
@@ -45,7 +45,7 @@ export default function MenuNavbar({ title = "Go Splitsies Title" }: MenuNavbarP
                                 <SheetHeader>
                                     <SheetTitle>Edit profile</SheetTitle>
                                     <SheetDescription>
-                                        Make changes to your profile here. Click save when you're done.
+                                        Make changes to your profile here. Click save when you&apos;re done.
                                     </SheetDescription>
                                 </SheetHeader>
                             </VisuallyHidden>
