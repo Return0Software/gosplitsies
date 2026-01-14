@@ -1,0 +1,60 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
+
+name: vacuum
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "openapi.yaml"
+      - "vacuum.conf.yaml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  vacuum:
+    runs-on: ubuntu-latest
+    env:
+      VACUUM_VERSION: "v0.14.3"
+
+    steps:
+      - name: Checkout gosplitsies
+        uses: actions/checkout@v4
+
+      - name: Get the various paths for Go caching
+        id: go-paths
+        run: |
+          echo "GOBIN=$(go env GOBIN)" >> "$GITHUB_OUTPUT"
+          echo "GOCACHE=$(go env GOCACHE)" >> "$GITHUB_OUTPUT"
+          echo "GOMODCACHE=$(go env GOMODCACHE)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Go Modules
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ steps.go-paths.outputs.GOBIN }}
+            ${{ steps.go-paths.outputs.GOCACHE }}
+            ${{ needs.go-paths.outputs.GOMODCACHE }}
+          key: ${{ env.VACUUM_VERSION }}
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          cache: false
+          check-latest: true
+          go-version: stable
+
+      - name: Install vacuum
+        run: |
+          go install "github.com/daveshanley/vacuum@$VACUUM_VERSION"
+
+      - name: Lint the OpenAPI Description
+        run: |
+          vacuum lint --no-style openapi.yaml

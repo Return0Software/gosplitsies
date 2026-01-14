@@ -7,6 +7,17 @@ SPDX-FileCopyrightText: 2024 Tristan Partin <tristan@partin.io>
 
 # gosplitsies
 
+## server
+
+### Building
+
+```shell
+# Release
+just build
+# Debug
+just debug
+```
+
 ## ui
 
 ### Setup

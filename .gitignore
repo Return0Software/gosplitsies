@@ -30,3 +30,7 @@ go.work.sum
 .env
 
 !.vscode/
+
+# Go ignores
+gsplit
+gsplit.debug
